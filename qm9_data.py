@@ -95,7 +95,9 @@ class QM9gen(DownloadableAtomsData):
         self.path = path
         self.dbpath = os.path.join(self.path, f'qm9gen.db')
         self.precompute_distances = precompute_distances
-        self.remove_invalid = remove_invalid
+        self.remove_invalid = False
+        # self.remove_invalid = remove_invalid
+        print(self.remove_invalid)
 
         super().__init__(self.dbpath, subset=subset,
                          available_properties=self.properties,

@@ -1138,4 +1138,4 @@ def generate_molecules(amount,
 
     if failed_counter > 0:
         print(f'Failed attempts: {failed_counter}')
-    return results
+    return results, torch.sum(unfinished).item()
